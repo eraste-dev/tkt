@@ -1,0 +1,53 @@
+<div class="welcome-text my-3">
+  <h2>Welcome on TKT dashboard!</h2>
+</div>
+
+
+<!-- filters -->
+<div class="mb-5">
+  <!-- FILTRES -->
+  <div class="row col-md-10">
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <label class="form-label">
+          Selector <span class="text-danger">*</span>
+        </label>
+        <div class="form-control-wrap">
+          <select class="js-select" data-search="true" data-sort="false" multiple="true" [(ngModel)]="selectorArray"
+            (change)="setFilter('selector')">
+            <option [value]="option" *ngFor="let option of selectorArray">
+              {{option}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div *ngIf="!compagnies" class="spinner-border spinner-border-sm"> <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <!-- TABLE -->
+  <table class="table table-theme" *ngIf="compagnies">
+    <thead>
+      <tr>
+        <th scope="col">COMPANY</th>
+        <th scope="col">N Siren</th>
+        <th scope="col">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of withFilter()" class="mb-5"  >
+        <td>{{ company.name }}</td>
+        <td>{{ company.siren }}</td>
+        <td>
+          <button class="btn btn-primary">
+            {{ company.sector }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

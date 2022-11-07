@@ -1,0 +1,24 @@
+<body class="nk-body" data-sidebar-collapse="lg" data-navbar-collapse="lg">
+  <div class="nk-app-root">
+    <div class="nk-main">
+      <!-- SIDEBAR -->
+      <div class="nk-sidebar nk-sidebar-fixed" id="sidebar">
+        <app-side-bar></app-side-bar>
+      </div>
+
+      <div class="nk-wrap">
+        <div class="nk-content">
+          <div class="container-fluid">
+            <div class="nk-content-inner">
+              <div class="nk-content-body">
+                <div class="row g-gs">
+                  <router-outlet></router-outlet>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

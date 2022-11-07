@@ -1,0 +1,65 @@
+<div class="nk-sidebar-element nk-sidebar-head">
+  <div class="nk-sidebar-brand">
+    <a href="" class="logo-link">
+      <div class="logo-wrap">
+        <h5 class="logo-svg">
+          <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2_6164)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H29.9813V60C24.4688 60 20 55.5294 20 50.0145V20Z"
+                fill="#4E59FF" />
+              <path d="M39.9627 50.0145H29.9814V60H39.9627V50.0145Z" fill="#4E59FF" />
+              <path d="M39.9627 30.2957H29.9814V40.2811H39.9627V30.2957Z" fill="#4E59FF" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M79.8828 20H89.8641V60C84.3516 60 79.8828 55.5294 79.8828 50.0145V20Z" fill="#4E59FF" />
+              <path d="M99.8456 50.0145H89.8643V60H99.8456V50.0145Z" fill="#4E59FF" />
+              <path d="M99.8456 30.2957H89.8643V40.2811H99.8456V30.2957Z" fill="#4E59FF" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M44.9531 20H54.9344V60C49.4219 60 44.9531 55.5294 44.9531 50.0145V20Z" fill="#4E59FF" />
+              <path d="M64.911 40H54.9297V49.9855H64.911V40Z" fill="#4E59FF" />
+              <path d="M74.8924 49.9855H64.9111V59.9709H74.8924V49.9855Z" fill="#4E59FF" />
+              <path d="M74.8924 30.0145H64.9111V40H74.8924V30.0145Z" fill="#4E59FF" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2_6164">
+                <rect width="79.759" height="40" fill="white" transform="translate(20 20)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </h5>
+      </div>
+    </a>
+
+    <div class="nk-compact-toggle me-n1">
+      <button class="btn btn-md btn-icon text-light btn-no-hover compact-toggle">
+        <em class="icon off ni ni-chevrons-left"></em>
+        <em class="icon on ni ni-chevrons-right"></em>
+      </button>
+    </div>
+
+    <div class="nk-sidebar-toggle me-n1">
+      <button class="btn btn-md btn-icon text-light btn-no-hover sidebar-toggle">
+        <em class="icon ni ni-arrow-left"></em>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="nk-sidebar-element nk-sidebar-body">
+  <div class="nk-sidebar-content">
+    <div class="nk-sidebar-menu" data-simplebar>
+      <ul class="nk-menu">
+
+        <li class="nk-menu-item" *ngFor="let item of menu">
+          <!-- [routerLink]="item.link" routerLinkActive="active" (click)="goTo(item.link)" -->
+          <a class="nk-menu-link" [routerLink]="item.link" routerLinkActive="">
+            <span class="nk-menu-icon">
+              <em [class]="item.icon"> </em>
+            </span>
+            <span class="nk-menu-text">{{item.title}}</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
